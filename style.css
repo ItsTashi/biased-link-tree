@@ -1,0 +1,149 @@
+:root{
+    --background: #f0f2ec;
+    --textColor: #4B533A;
+    --buttonColor: #92d69e;
+}
+
+
+*{
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.1s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+}
+
+body{
+    /*height: 100vh;*/
+        background: radial-gradient(
+        rgba(146,214,158, 0.2) 8%,
+        transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    background-color: var(--background);
+    color: var(--textColor);
+    box-sizing: border-box;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    gap: 0.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+label{
+    font-family: 'Major Mono Display', monospace;
+}
+
+#avatar{
+    margin: 0;
+    margin-top: 48px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+h1{
+    margin: 0;
+}
+
+#bio{
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight:800;
+    font-style: oblique
+}
+
+
+.button-link{
+    width: 40%;
+    text-align: center;
+    border: 1px;
+    border-radius: 20px;
+    background-color: var(--buttonColor);
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 0.1);
+
+}
+
+.button-link:hover{
+    background-color: var(--textColor);
+    color: var(--buttonColor);
+    transform: scale(105%);
+}
+
+.socials{
+    padding:0 25px;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+#icon{
+    color: var(--buttonColor);
+
+}
+#icon:hover{
+    color: var(--textColor);
+    transform: scale(120%);
+}
+
+@media only screen and (max-width: 1080px) {
+    body{
+        height: 100vh;
+    }
+    h1{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    #avatar{
+        margin-top: 8px;
+        height:300px;
+        border-radius: 100%;
+    }
+    .button-link{
+        display: grid;
+        width: 90%;
+        height: 80px;
+        font-size: x-large;
+    }
+    .socials{
+        display: flex;
+        font-size: 50px;
+    }
+    #icon{
+        padding: 0px 0.5rem;
+    }
+
+}
+@media only screen and (max-width: 385px){
+    #avatar{
+        height: 100px;
+    }
+}
+
+#toggle{
+    padding: 5px 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    /*background-color: var(--buttonColor);*/
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+#toggle:hover{
+    background-color: var(--textColor);
+    color: var(--buttonColor)
+}
+/* Dark Mode */
+
+.dark{
+    background: radial-gradient(
+        rgba(146,214,158, 0.2) 8%,
+        transparent 8%
+    );
+    background-position: -10% 0%;
+    background-size: 5vmin 5vmin;
+    background-color: #1A1C19;
+    color: #f0f2ec;
+}

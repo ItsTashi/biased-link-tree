@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Links to my social media accounts and github, a little info about what i do">
+    <meta name="author" content="Tashinga Chikwanha">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Biased Links</title>
+</head>
+<body>
+    <img src="avatar2.jpg" alt="my picture" id="avatar">
+    <h1>Tashinga Chikwanha</h1>
+    <h6 id="bio">software developer, student, manga reader and gamer</h6>
+    <i class="fa fa-moon" onclick="toggleDark(this)" id="toggle"></i>
+    <label>[  L I N K S  ]</label>
+    <a href="blog.html" class="button-link">
+        <p>
+            <i class="fa fa-pen"></i>
+            Blog
+        </p>
+    </a>
+    <a href="blog.html" class="button-link" target=_blank>
+        <p>
+            <i class="fa fa-diagram-project" id="project"></i>
+            Projects
+        </p>
+    </a>
+    <a href="https://github.com/ItsTashi" class="button-link" target=_blank>
+        <p>
+            <i class="fa fa-github"></i>
+            Github
+        </p>
+    </a>
+    <label>[  S O C I A L S  ]</label>
+    <div class="socials">
+        <a href="https://twitter.com/whyamibiased" target=_blank>
+            <i class="fa fa-twitter" id="icon"></i>
+        </a>
+        <a href="https://www.instagram.com/biased.exe/" target=_blank>
+            <i class="fa fa-instagram fa-inverse" id="icon"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCUxp14J8YRTQCIqIN8e1-Qw" target=_blank>
+            <i class="fa fa-youtube-play" id="icon"></i>
+        </a>
+    </div>
+    <h6> I've got a jar of dirt <i class="fa-solid fa-jar"></i></h6>
+    <script>
+        function toggleDark(state){
+            const button =document.querySelector("toggle");
+            const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+            document.body.classList.toggle("dark");
+            document.getElementById("toggle").classList.toggle("fa-sun-o");
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/cb4afd7b7d.js" crossorigin="anonymous"></script>
+</body>
+</html>
