@@ -52,7 +52,8 @@
     </div>
     <h6> I've got a jar of dirt <i class="fa-solid fa-jar"></i></h6>
     <script>
-            document.getElementById("toggle").onclick = function(){
+                let icon = document.getElementById("toggle");
+                icon.onclick = function(){
                 window.alert("Working");
                 let image = document.getElementbyId("avatar");
                 let currentImage = image.getAttribute("src").substring(0,1);
