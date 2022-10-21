@@ -18,7 +18,7 @@
     <img src="avatar2.jpg" alt="my picture" id="avatar">
     <h1>Tashinga Chikwanha</h1>
     <h6 id="bio">software developer, student, manga reader and gamer</h6>
-    <i class="fa fa-moon" onclick="toggleDark(this)" id="toggle"></i>
+    <i class="fa fa-moon" id="toggle"></i>
     <label>[  L I N K S  ]</label>
     <a href="blog.html" class="button-link">
         <p>
@@ -52,12 +52,21 @@
     </div>
     <h6> I've got a jar of dirt <i class="fa-solid fa-jar"></i></h6>
     <script>
-        function toggleDark(state){
-            const button =document.querySelector("toggle");
-            const useDark = window.matchMedia("(prefers-color-scheme: dark)");
-            document.body.classList.toggle("dark");
-            document.getElementById("toggle").classList.toggle("fa-sun-o");
-        }
+            let icon = document.getElementsbyClassName("fa-moon");
+            icon[0].onclick = () => {
+                let image = document.getElementbyId("avatar");
+                let currentImage = image.getAttribute("src").substring(0,1);
+
+                if (!currentImage) {
+                    currentImage++;
+                    image.setAttribute("src", `${currentImage}.jpg`);
+                } else {
+                    currentImage--;
+                    image.setAttribute("src", `${currentImage}.jpg`);
+                }
+                document.body.classList.toggle("dark");
+                icon[0].classList.toggle("fa-sun-o");
+            }
     </script>
     <script src="https://kit.fontawesome.com/cb4afd7b7d.js" crossorigin="anonymous"></script>
 </body>
