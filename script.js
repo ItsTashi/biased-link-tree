@@ -1,23 +1,15 @@
-(function(){
-    let onpageload = localStorage.getItem("toggle") || "";
-    let element = document.body;
-    element.classList.add(onpageload);
-    document.getElementById("toggle").textContent =
-    localStorage.getItem("toggle") || "";
-})();
-
-function toggleDark(state){
-    let element = document.body;
-    element.classList.toggle("dark");
-    state.classList.toggle("fa-sun-o");
-
-    let toggle = localStorage.getItem("toggle");
-
-    if (toggle === "dark"){
-        localStorage.setItem("toggle", "");
-    } else {
-        localStorage.setItem("toggle", "dark");
-    }
-    document.getElementById("toggle").textContent = localStorage.getItem("toggle");
-}
+        let icon = document.getElementById("toggle");
+        icon.onclick = function(){
+            let image = document.getElementById("avatar");
+            let currentImage = image.getAttribute("src").substring(0, 1);
+            if (!Number(currentImage)) {
+                currentImage++;
+                image.setAttribute("src", `${currentImage}.jpg`);
+            } else {
+                currentImage--;
+                image.setAttribute("src", `${currentImage}.jpg`);
+            }
+            document.body.classList.toggle("dark");
+            icon.classList.toggle("fa-sun-o");
+        }
 
