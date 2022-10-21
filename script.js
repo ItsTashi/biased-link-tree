@@ -9,7 +9,6 @@
                 currentImage--;
                 image.setAttribute("src", `${currentImage}.jpg`);
             }
-                window.alert(currentImage);
             document.body.classList.toggle("dark");
             icon.classList.toggle("fa-sun-o");
         }
