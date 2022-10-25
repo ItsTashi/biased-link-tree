@@ -4,7 +4,6 @@
     --buttonColor: #92d69e;
 }
 
-
 *{
     font-family: 'Rubik', sans-serif;
     transition: all 0.1s ease 0s;
@@ -55,7 +54,6 @@ h1{
     font-weight:800;
     font-style: oblique
 }
-
 
 .button-link{
     width: 40%;
@@ -122,6 +120,7 @@ h1{
 }
 
 #toggle{
+    display: none;
     padding: 5px 10px;
     font-size: 30px;
     border: none;
@@ -136,6 +135,18 @@ h1{
     color: var(--buttonColor)
 }
 /* Dark Mode */
+@media (prefers-color-scheme: dark){
+    body{
+        background: radial-gradient(
+            rgba(146,214,158, 0.2) 8%,
+            transparent 8%
+        );
+        background-position: -10% 0%;
+        background-size: 5vmin 5vmin;
+        background-color: #1A1C19;
+        color: #f0f2ec;
+    }
+}
 
 .dark{
     background: radial-gradient(
