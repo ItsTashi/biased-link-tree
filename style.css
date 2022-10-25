@@ -141,7 +141,7 @@ h1{
             rgba(146,214,158, 0.2) 8%,
             transparent 8%
         );
-        background-position: -10% 0%;
+        background-position: 0% 0%;
         background-size: 5vmin 5vmin;
         background-color: #1A1C19;
         color: #f0f2ec;
